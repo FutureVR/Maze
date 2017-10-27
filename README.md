@@ -1,5 +1,8 @@
 # Maze
 
+<img src="https://raw.github.com/FutureVR/Maze/master/media/snapshot_1.PNG" />
+<img src="https://raw.github.com/FutureVR/Maze/master/media/snapshot_3.PNG" />
+
 <b>INTRODUCTION:</b> This simulation creates a maze and then “floods” it slowly over time, marking flooded territories with a red color, and walls with black. I was inspired to make this small Unity application by months of playing dungeon crawlers like “Dungeon Crawl Stone Soup.” I wanted to somehow generate the maze-like architecture from my childhood games. After creating the maze, I thought it would be interesting to “flood” it, and watch how the “water” slipped through all the passages, in order to better understand the flow of the randomly-generated paths.
 
 <b>IMPLEMENTATION:</b> The maze was created by first selecting a random block within a 2D array, and a direction in which to create the “hallway”. Every subsequent block in that direction became a part of this hallway until it reached an arbitrarily-set length, or the next block would have had more than one empty neighbor. This process continued until no more walls could be turned into empty spaces. Once the maze was created, Breadth First Search was used to fill in the “hallways” of the maze, starting at the bottom left corner. 
